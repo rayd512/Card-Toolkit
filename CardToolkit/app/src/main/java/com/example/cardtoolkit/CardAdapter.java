@@ -19,8 +19,8 @@ public class CardAdapter extends RecyclerView.Adapter<CardAdapter.CardViewHolder
 
         public CardViewHolder(@NonNull View itemView) {
             super(itemView);
-            mCardImage = itemView.findViewById(R.id.cardImageID);
-            mCardName = itemView.findViewById(R.id.cardNameID);
+            mCardImage = itemView.findViewById(R.id.card_image_id);
+            mCardName = itemView.findViewById(R.id.card_name_id);
         }
     }
 
