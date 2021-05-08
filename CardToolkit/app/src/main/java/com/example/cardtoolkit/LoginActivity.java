@@ -107,7 +107,7 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                     } else {
                         if(mAuthHandler.isUserVerified()) {
                             // Start new activity here
-                            startActivity(new Intent(getApplicationContext(), MainActivity.class));
+                            startActivity(new Intent(getApplicationContext(), CardActivity.class));
                         } else {
                             mAuthHandler.sendEmailVerification();
                             Toast.makeText(LoginActivity.this,
