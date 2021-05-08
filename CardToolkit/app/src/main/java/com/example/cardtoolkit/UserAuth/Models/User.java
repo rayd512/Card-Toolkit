@@ -1,4 +1,4 @@
-package com.example.cardtoolkit.Models;
+package com.example.cardtoolkit.UserAuth.Models;
 
 public class User {
 

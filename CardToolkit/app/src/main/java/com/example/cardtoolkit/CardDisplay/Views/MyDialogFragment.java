@@ -1,4 +1,4 @@
-package com.example.cardtoolkit;
+package com.example.cardtoolkit.CardDisplay.Views;
 
 import android.os.Bundle;
 import android.view.LayoutInflater;
@@ -11,6 +11,8 @@ import android.widget.Toast;
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
 import androidx.fragment.app.DialogFragment;
+
+import com.example.cardtoolkit.R;
 
 public class MyDialogFragment extends DialogFragment {
 
@@ -32,7 +34,7 @@ public class MyDialogFragment extends DialogFragment {
                     Toast.makeText(getActivity(), "Please fill in all fields.", Toast.LENGTH_SHORT).show();
                 }
                 else{
-                    FIrebase
+//                    FIrebase
                 }
             }
         });

@@ -5,7 +5,7 @@ import androidx.annotation.NonNull;
 import com.example.cardtoolkit.Firebase.FBCallbacks.LoginUserCallback;
 import com.example.cardtoolkit.Firebase.FBCallbacks.RegisterUserCallback;
 import com.example.cardtoolkit.Firebase.FBCallbacks.ResetPassCallback;
-import com.example.cardtoolkit.Models.User;
+import com.example.cardtoolkit.UserAuth.Models.User;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
@@ -85,5 +85,10 @@ public class FirebaseAuthHandler {
                 }
             }
         });
+    }
+
+    public boolean isSignedIn() {
+        FirebaseUser user = mAuth.getCurrentUser();
+        return true && user != null;
     }
 }

@@ -1,4 +1,4 @@
-package com.example.cardtoolkit;
+package com.example.cardtoolkit.UserAuth.Activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -13,8 +13,10 @@ import android.widget.ProgressBar;
 import android.widget.TextView;
 import android.widget.Toast;
 
+import com.example.cardtoolkit.CardDisplay.Views.CardActivity;
 import com.example.cardtoolkit.Firebase.FBCallbacks.LoginUserCallback;
 import com.example.cardtoolkit.Firebase.FirebaseAuthHandler;
+import com.example.cardtoolkit.R;
 import com.google.firebase.auth.FirebaseAuth;
 
 /**
@@ -51,6 +53,11 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
         progressBar = (ProgressBar) findViewById(R.id.login_progressBar);
 
         mAuthHandler = new FirebaseAuthHandler(FirebaseAuth.getInstance());
+
+        if(mAuthHandler.isSignedIn()) {
+            startActivity(new Intent(this, CardActivity.class));
+            finish();
+        }
     }
 
     @Override

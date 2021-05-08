@@ -9,11 +9,10 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/Theme.CardToolkit">
-        <activity android:name=".ForgotPasswordActivity"></activity>
-        <activity android:name=".MainActivity" />
-        <activity android:name=".RegisterActivity" />
-        <activity android:name=".CardActivity"/>
-        <activity android:name=".LoginActivity">
+        <activity android:name=".UserAuth.Activities.ForgotPasswordActivity" />
+        <activity android:name=".UserAuth.Activities.RegisterActivity" />
+        <activity android:name=".CardDisplay.Views.CardActivity" />
+        <activity android:name=".UserAuth.Activities.LoginActivity">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
 

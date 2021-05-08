@@ -1,4 +1,4 @@
-package com.example.cardtoolkit;
+package com.example.cardtoolkit.CardDisplay.Views;
 
 import android.os.Bundle;
 import android.view.View;
@@ -7,6 +7,9 @@ import androidx.appcompat.app.AppCompatActivity;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.example.cardtoolkit.CardDisplay.Models.CardAdapter;
+import com.example.cardtoolkit.CardDisplay.Models.CardItem;
+import com.example.cardtoolkit.R;
 import com.google.android.material.floatingactionbutton.FloatingActionButton;
 
 import java.util.ArrayList;
@@ -21,6 +24,9 @@ public class CardActivity extends AppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_view_card_recycler);
+
+        
+
         mAddCardButton = findViewById(R.id.add_card_button);
 
         ArrayList<CardItem> cardList = new ArrayList<>();

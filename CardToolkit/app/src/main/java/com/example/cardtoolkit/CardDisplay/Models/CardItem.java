@@ -1,4 +1,4 @@
-package com.example.cardtoolkit;
+package com.example.cardtoolkit.CardDisplay.Models;
 
 public class CardItem {
     private int mCardImage;

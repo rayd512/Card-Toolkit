@@ -1,4 +1,4 @@
-package com.example.cardtoolkit;
+package com.example.cardtoolkit.UserAuth.Activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -12,6 +12,7 @@ import android.widget.Toast;
 
 import com.example.cardtoolkit.Firebase.FBCallbacks.ResetPassCallback;
 import com.example.cardtoolkit.Firebase.FirebaseAuthHandler;
+import com.example.cardtoolkit.R;
 import com.google.firebase.auth.FirebaseAuth;
 
 public class ForgotPasswordActivity extends AppCompatActivity implements View.OnClickListener{
@@ -37,6 +38,10 @@ public class ForgotPasswordActivity extends AppCompatActivity implements View.On
 
     }
 
+    public void onPause() {
+        super.onPause();
+        overridePendingTransition(0, 0);
+    }
 
     @Override
     public void onClick(View v) {

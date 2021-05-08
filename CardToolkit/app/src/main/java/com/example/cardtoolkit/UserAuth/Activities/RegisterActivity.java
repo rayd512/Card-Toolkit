@@ -1,4 +1,4 @@
-package com.example.cardtoolkit;
+package com.example.cardtoolkit.UserAuth.Activities;
 
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -15,6 +15,7 @@ import android.widget.Toast;
 
 import com.example.cardtoolkit.Firebase.FirebaseAuthHandler;
 import com.example.cardtoolkit.Firebase.FBCallbacks.RegisterUserCallback;
+import com.example.cardtoolkit.R;
 import com.google.firebase.auth.FirebaseAuth;
 
 /**
@@ -50,6 +51,11 @@ public class RegisterActivity extends AppCompatActivity implements View.OnClickL
 
 
 
+    }
+
+    public void onPause() {
+        super.onPause();
+        overridePendingTransition(0, 0);
     }
 
 
