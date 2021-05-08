@@ -4,6 +4,7 @@ import androidx.annotation.NonNull;
 
 import com.example.cardtoolkit.Firebase.FBCallbacks.LoginUserCallback;
 import com.example.cardtoolkit.Firebase.FBCallbacks.RegisterUserCallback;
+import com.example.cardtoolkit.Firebase.FBCallbacks.ResetPassCallback;
 import com.example.cardtoolkit.Models.User;
 import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
@@ -71,5 +72,18 @@ public class FirebaseAuthHandler {
     public void sendEmailVerification() {
         FirebaseUser user = mAuth.getCurrentUser();
         user.sendEmailVerification();
+    }
+
+    public void resetPassword(String email, ResetPassCallback cb) {
+        mAuth.sendPasswordResetEmail(email).addOnCompleteListener(new OnCompleteListener<Void>() {
+            @Override
+            public void onComplete(@NonNull Task<Void> task) {
+                if(task.isSuccessful()) {
+                    cb.onComplete(true);
+                } else {
+                    cb.onComplete(false);
+                }
+            }
+        });
     }
 }
