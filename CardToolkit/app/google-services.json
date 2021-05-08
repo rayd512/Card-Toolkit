@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "449752077283",
+    "project_id": "cardtoolkit-beb7e",
+    "storage_bucket": "cardtoolkit-beb7e.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:449752077283:android:e46471e17f5c2f41a286d6",
+        "android_client_info": {
+          "package_name": "com.example.cardtoolkit"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "449752077283-neokfigl7pfoj545rb2l503ve1v261eg.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBeyz3WaXEq-CSdeWt-hLMpNMQYHiS5J3E"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "449752077283-neokfigl7pfoj545rb2l503ve1v261eg.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
