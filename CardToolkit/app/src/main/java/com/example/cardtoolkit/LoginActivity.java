@@ -60,12 +60,23 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                 startRegisterActivity();
                 break;
             case R.id.forgot_textView:
+                startForgotPasswordActivity();
                 break;
             case R.id.login_button:
                 handleLogin();
 
 
         }
+    }
+
+    /**
+     * Starts the forgot password acitivity with no animation
+     */
+    private void startForgotPasswordActivity() {
+        Intent intent = new Intent(getApplicationContext(), ForgotPasswordActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_NO_ANIMATION);
+        startActivity(intent);
+        overridePendingTransition(0,0);
     }
 
     /**
@@ -106,9 +117,17 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
                     }
                 }
             });
+        } else {
+            Toast.makeText(getApplicationContext(),
+                    "Please check your login credentials",
+                    Toast.LENGTH_LONG).show();
         }
     }
 
+    /**
+     * Checks if form is not blank and email is valid
+     * @return
+     */
     private boolean isValidForm() {
         String email = emailEditText.getText().toString();
         String password = passEditText.getText().toString();
